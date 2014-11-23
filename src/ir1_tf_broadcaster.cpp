@@ -14,7 +14,10 @@ int main(int argc, char **argv) {
     ros::Rate loop_rate(10.0);
     while (n.ok()) {
         transform.setOrigin(tf::Vector3(6.0, 6.5, 0.0));
-        transform.setRotation(tf::Quaternion(0, 0, M_PI/2, 1));
+        //transform.setRotation(tf::Quaternion(0, 0, M_PI_2, 1));
+        tf::Quaternion q;
+        q.setEuler(0.0, 0.0, M_PI_2);
+        transform.setRotation(q);
 
         br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "robot_center", "sensor1"));
         loop_rate.sleep();
