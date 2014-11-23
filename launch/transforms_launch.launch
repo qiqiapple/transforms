@@ -1,0 +1,11 @@
+<launch>
+    <!-- Transform nodes -->
+    <node pkg="transforms" type="sensor1_tf_node" name="sensor1_tf_node" />
+    <node pkg="transforms" type="sensor2_tf_node" name="sensor2_tf_node" />
+    <node pkg="transforms" type="sensor3_tf_node" name="sensor3_tf_node" />
+    <node pkg="transforms" type="sensor4_tf_node" name="sensor4_tf_node" />
+    <node pkg="transforms" type="base_robot_tf_node" name="base_robot_tf" />
+    <node pkg="transforms" type="map_base_tf_node" name="map_base_tf" />
+    <!--<node pkg="transforms" type="ir_transform_node" name="ir_transform" output="screen" /> -->
+
+</launch>
