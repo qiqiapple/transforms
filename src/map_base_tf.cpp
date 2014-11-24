@@ -11,10 +11,10 @@ int main(int argc, char **argv) {
     static tf::TransformBroadcaster br;
     tf::Transform transform;
 
-    ros::Rate loop_rate(10.0);
+    ros::Rate loop_rate(20.0);
     while (n.ok()) {
-        transform.setOrigin(tf::Vector3(50.0, 50.0, 0.0));
-        transform.setRotation(tf::Quaternion(0, 0, 0, 1));
+        transform.setOrigin(tf::Vector3(100.0, 100.0, 0.0));
+        transform.setRotation(tf::Quaternion(0, 0, M_PI_2, 1));
 
         br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "map", "base"));
         loop_rate.sleep();

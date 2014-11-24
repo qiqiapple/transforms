@@ -11,9 +11,9 @@ int main(int argc, char **argv) {
     static tf::TransformBroadcaster br;
     tf::Transform transform;
 
-    ros::Rate loop_rate(10.0);
+    ros::Rate loop_rate(20.0);
     while (n.ok()) {
-        transform.setOrigin(tf::Vector3(6.0, 6.5, 0.0));
+        transform.setOrigin(tf::Vector3(-0.065, 0.06, 0.0));
         //transform.setRotation(tf::Quaternion(0, 0, M_PI_2, 1));
         tf::Quaternion q;
         q.setEuler(0.0, 0.0, M_PI_2);
