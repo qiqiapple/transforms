@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
 
     ros::Rate loop_rate(20.0);
     while (n.ok()) {
-        transform.setOrigin(tf::Vector3(100.0, 100.0, 0.0));
+        transform.setOrigin(tf::Vector3(5.0, 5.0, 0.0));
         transform.setRotation(tf::Quaternion(0, 0, M_PI_2, 1));
 
         br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "map", "base"));
