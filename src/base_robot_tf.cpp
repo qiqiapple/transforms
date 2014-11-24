@@ -7,7 +7,7 @@ void poseCallback(const ras_arduino_msgs::OdometryConstPtr& msg){
   tf::Transform transform;
   transform.setOrigin( tf::Vector3(msg->x, msg->y, 0) );
   tf::Quaternion q;
-  q.setEuler(0.0, 0.0, msg->theta);
+  q.setEuler(msg->theta, 0.0, 0.0);
   transform.setRotation(q);
   br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "base", "robot_center"));
 }

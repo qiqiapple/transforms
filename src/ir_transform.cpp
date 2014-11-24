@@ -30,7 +30,7 @@ public:
             if (msg->ch1 < 30 && msg->ch1 > 0) {
                 sensor1.header.frame_id = "sensor1";
                 sensor1.point.y = msg->ch1/100;
-                listener.waitForTransform("/sensor1", "/map", ros::Time::now(), ros::Duration(1));
+                listener.waitForTransform("/sensor1", "/map", ros::Time(0), ros::Duration(1));
                 listener.transformPoint("map", sensor1, base_point1);
                 itmsg.s1 = true;
                 itmsg.p1 = base_point1;
@@ -40,7 +40,7 @@ public:
             if (msg->ch2 < 30 && msg->ch2 > 0) {
                 sensor2.header.frame_id = "sensor2";
                 sensor2.point.y = msg->ch2/100;
-                listener.waitForTransform("/sensor2", "/map", ros::Time::now(), ros::Duration(1));
+                listener.waitForTransform("/sensor2", "/map", ros::Time(0), ros::Duration(1));
                 listener.transformPoint("map", sensor2, base_point2);
                 itmsg.s2 = true;
                 itmsg.p2 = base_point2;
@@ -50,7 +50,7 @@ public:
             if (msg->ch3 < 30 && msg->ch3 > 0) {
                 sensor3.header.frame_id = "sensor3";
                 sensor3.point.y = msg->ch3/100;
-                listener.waitForTransform("/sensor3", "/map", ros::Time::now(), ros::Duration(1));
+                listener.waitForTransform("/sensor3", "/map", ros::Time(0), ros::Duration(1));
                 listener.transformPoint("map", sensor3, base_point3);
                 itmsg.s3 = true;
                 itmsg.p3 = base_point3;
@@ -60,7 +60,7 @@ public:
             if (msg->ch4 < 30 && msg->ch4 > 0) {
                 sensor4.header.frame_id = "sensor4";
                 sensor4.point.y = msg->ch4/100;
-                listener.waitForTransform("/sensor4", "/map", ros::Time::now(), ros::Duration(1));
+                listener.waitForTransform("/sensor4", "/map", ros::Time(0), ros::Duration(1));
                 listener.transformPoint("map", sensor4, base_point4);
                 itmsg.s4 = true;
                 itmsg.p4 = base_point4;
