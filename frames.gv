@@ -1,0 +1,7 @@
+digraph G {
+"robot_center" -> "sensor1"[label="Broadcaster: /sensor1_tf_node\nAverage rate: 20.200 Hz\nMost recent transform: 1416915010.654 \nBuffer length: 4.950 sec\n"];
+"map" -> "robot_center"[label="Broadcaster: /map_robot_tf\nAverage rate: 20.208 Hz\nMost recent transform: 1416915010.652 \nBuffer length: 4.899 sec\n"];
+"robot_center" -> "sensor2"[label="Broadcaster: /sensor2_tf_node\nAverage rate: 20.201 Hz\nMost recent transform: 1416915010.659 \nBuffer length: 4.950 sec\n"];
+"robot_center" -> "sensor3"[label="Broadcaster: /sensor3_tf_node\nAverage rate: 20.206 Hz\nMost recent transform: 1416915010.628 \nBuffer length: 4.899 sec\n"];
+"robot_center" -> "sensor4"[label="Broadcaster: /sensor4_tf_node\nAverage rate: 20.205 Hz\nMost recent transform: 1416915010.656 \nBuffer length: 4.900 sec\n"];
+}
